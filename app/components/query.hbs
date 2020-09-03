@@ -1,0 +1,7 @@
+{{#if this.users.isLoaded}}
+  {{#each this.users.value key="id" as |user|}}
+    {{user.name}}<br>
+  {{/each}}
+{{else}}
+  Loading...
+{{/if}}

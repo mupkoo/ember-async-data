@@ -7,6 +7,8 @@ import { load } from 'ember-async-data/helpers/load';
 export default class DemoComponent extends Component {
   @tracked propertyResult;
   @tracked helperResult;
+  @tracked queryComponent;
+
   @service('store') store;
 
   get findAll() {

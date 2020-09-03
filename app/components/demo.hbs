@@ -6,6 +6,10 @@
   Toggle helper based result
 </button>
 
+<button type="button" {{on "click" (fn this.toggle 'queryComponent')}}>
+  Toggle QueryComponent
+</button>
+
 <br><br>
 
 {{#if this.propertyResult}}
@@ -28,4 +32,8 @@
       Loading...
     {{/if}}
   {{/let}}
+{{/if}}
+
+{{#if this.queryComponent}}
+  <Query @ids={{array 1 2 3}} />
 {{/if}}
