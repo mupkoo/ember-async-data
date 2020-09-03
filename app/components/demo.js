@@ -8,6 +8,7 @@ export default class DemoComponent extends Component {
   @tracked propertyResult;
   @tracked helperResult;
   @tracked queryComponent;
+  @tracked queryWithHelper;
 
   @service('store') store;
 

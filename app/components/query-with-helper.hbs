@@ -1,0 +1,9 @@
+{{#let (load this.query) as |data|}}
+  {{#if data.isLoaded}}
+    {{#each data.value key="id" as |user|}}
+      {{user.name}}<br>
+    {{/each}}
+  {{else}}
+    Loading...
+  {{/if}}
+{{/let}}

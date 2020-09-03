@@ -7,7 +7,11 @@
 </button>
 
 <button type="button" {{on "click" (fn this.toggle 'queryComponent')}}>
-  Toggle QueryComponent
+  Toggle Query Component
+</button>
+
+<button type="button" {{on "click" (fn this.toggle 'queryWithHelper')}}>
+  Toggle QueryWithHelper Component
 </button>
 
 <br><br>
@@ -36,4 +40,8 @@
 
 {{#if this.queryComponent}}
   <Query @ids={{array 1 2 3}} />
+{{/if}}
+
+{{#if this.queryWithHelper}}
+  <QueryWithHelper @ids={{array 1 2 3}} />
 {{/if}}
