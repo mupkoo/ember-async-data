@@ -1,9 +1,7 @@
-export default function(/* server */) {
+export default function(server) {
+  for (let name of ['Obi-Wan Kenobi', 'Yoda', 'Windu']) {
+    server.create('user', { name });
+  }
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
-  */
-
-  // server.createList('post', 10);
+  server.createList('user', 10);
 }
