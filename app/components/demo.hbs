@@ -1,0 +1,31 @@
+<button type="button" {{on "click" (fn this.toggle 'propertyResult')}}>
+  Toggle property based result
+</button>
+
+<button type="button" {{on "click" (fn this.toggle 'helperResult')}}>
+  Toggle helper based result
+</button>
+
+<br><br>
+
+{{#if this.propertyResult}}
+  {{#if this.users.isLoaded}}
+    {{#each this.users.value key="id" as |user|}}
+      {{user.name}}<br>
+    {{/each}}
+  {{else}}
+    Loading...
+  {{/if}}
+{{/if}}
+
+{{#if this.helperResult}}
+  {{#let (load this.findAll) as |result|}}
+    {{#if result.isLoaded}}
+      {{#each result.value key="id" as |user|}}
+        {{user.name}}<br>
+      {{/each}}
+    {{else}}
+      Loading...
+    {{/if}}
+  {{/let}}
+{{/if}}
